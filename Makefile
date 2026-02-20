@@ -25,12 +25,16 @@ $(OBJ_DIR)/$(SRC_DIR)/%.o: $(SRC_DIR)/%.c
 $(OBJ_DIR)/main.o: main.c
 	@mkdir -p $(OBJ_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
-
+	
 # Cria o diretório build se não existir
 $(OBJ_DIR):
 	mkdir -p $(OBJ_DIR)
 
+# Gera compile_commands.json com bear
+compile_commands.json:
+	bear -- $(MAKE) clean all
+
 clean:
-	rm -rf $(OBJ_DIR) $(TARGET)
+	rm -rf $(OBJ_DIR) $(TARGET) compile_commands.json
 
 .PHONY: all clean
