@@ -1,8 +1,9 @@
+# Biblioteca para implementacao de Estruturas de Dados
 
 A ser implementado:
 
 📦 Estruturas Lineares
-Lista Dinamica (Array List)
+Lista Dinamica (Array List) 
 Lista Ligada (Linked List)
 Pilha (Stack)
 Fila (Queue)
